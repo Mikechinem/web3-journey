@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michael's Web3 Portfolio</title>
+   <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- 🌗 Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle" title="Toggle Dark/Light Mode">🌙</button>
+
+    <!-- 🧍 Profile Image -->
+    <img src="assets/images/michael.png" alt="Michael Ehumadu" class="profile-img" />
+
+    <!-- 📝 Header / Intro -->
+    <header>
+      <p class="intro-text fade-in">
+        👋 Hi,<strong>This web page was created and delivered in 5 minutes.</strong>
+         This means you'll be paying lesser service fee than your competitor without
+         compromising quality and organisation. 
+         You get a complete premium design, delivered on time with zero extra cost<br /> 
+         <em> NO WORRIES FULL REFUND IS GUARANTEED...</em> If you don't like what i deliver in the end🤝
+      </p>
+    </header>
+
+    <!-- 🧭 Navigation -->
+    <nav>
+      <a href="#about" class="nav-link">About</a> |
+      <a href="#projects" class="nav-link">Projects</a> |
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <!-- 🧑‍💻 About Section -->
+    <section id="about">
+      <h1>About Me</h1>
+      <p class="intro-text">
+        I'm currently expanding into building decentralized apps that connect to
+        the blockchain. This is in line with helping you get the best flow for your business 
+        so you're strategically positioned in the future of how business is done on the internet. 
+      </p>
+
+      <!-- 📄 Download CV button -->
+      <a href="Michael_Ehumadu Fbad Resume.pdf" class="btn download" download> 📄 Download My CV</a>
+    </section>
+
+    <!-- 🛠️ Projects Section -->
+    <section id="projects">
+      <h1>My Projects</h1>
+      <ul class="project-list">
+        <li>🌍 Web 3 Landing Page (HTML Only)</li>
+        <li>💰 Crypto Price Tracker (Coming Soon)</li>
+        <li>🧠 Smart Contract Interaction DApp (Future Goal)</li>
+      </ul>
+    </section>
+
+    <!-- 📞 Contact Section -->
+    <section id="contact">
+      <h1>Contact</h1>
+      <p class="intro-text">
+        Email:
+        <a href="mailto:michael.ehumadu@gmail.com" class="nav-link">
+          michael.ehumadu@gmail.com
+        </a>
+      </p>
+      <p>
+        GitHub:
+        <a href="https://github.com/Mikechinem" target="_blank" class="nav-link">
+          Mikechinem
+        </a>
+      </p>
+    </section>
+
+    <!-- 🦶 Footer -->
+    <footer>
+      <p class="intro-text">
+        © 2025 Michael Ehumadu | Built with ❤ on my Web3 journey
+      </p>
+      <p class="intro-text">This is the beginning of something big for us 💪</p>
+    </footer>
+  </div>
+
+  <!-- ✨ Smooth Scroll + Theme Script -->
+  <script>
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+
+    // Theme toggle
+    const toggle = document.getElementById("theme-toggle");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("light-mode");
+      toggle.textContent = document.body.classList.contains("light-mode") ? "☀️" : "🌙";
+    });
+  </script>
+</body>
+</html>

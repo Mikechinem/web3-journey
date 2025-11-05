@@ -1,0 +1,270 @@
+/* 🎨 General Styles */
+body {
+  background-color: #070707;
+  color: #f1f0eb;
+  font-family: "Poppins", Arial, sans-serif;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
+  transition: background 0.5s, color 0.5s;
+}
+
+.container {
+  text-align: center;
+  background: #161b22;
+  padding: 40px 60px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  max-width: 450px;
+  width: 90%;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(245, 244, 242, 0.3);
+}
+
+/* 🌗 Theme Toggle Button */
+.theme-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #e4b109;
+  transition: transform 0.3s ease;
+}
+.theme-toggle:hover {
+  transform: rotate(20deg) scale(1.2);
+}
+
+/* 👤 Profile */
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #e4b109;
+  margin-top: 20px;
+}
+
+/* ✨ Headings */
+h1 {
+  color: #3fcc08;
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+/* 📜 Intro Paragraphs */
+.intro-text {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* 🎯 Buttons */
+
+/* no underline of button */
+a {
+  text-decoration: none;
+}
+.btn {
+  display: inline-block;
+  background-color: #cc8e08;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+
+.btn:hover {
+  background-color: #10c531;
+  box-shadow: 0 0 15px rgba(14, 180, 8, 0.5);
+  transform: scale(1.05);
+}
+
+/* 🌟 Glowing CV Button */
+.btn.download {
+  background-color: #e4b109;
+  color: #0e0d0d;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(228, 177, 9, 0.5);
+}
+
+.btn.download:hover {
+  background-color: #f3c613;
+  box-shadow: 0 0 30px rgba(243, 198, 19, 0.8);
+  transform: scale(1.08);
+}
+
+/* 🔗 Nav Links */
+.nav-link {
+  color: #e2bb0b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: #30b60f;
+}
+
+/* 🧩 Project List */
+.project-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.project-list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  transition: 0.3s ease;
+}
+
+.project-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: white;
+  font-weight: bold;
+}
+
+.project-list li:hover {
+  color: #e4b109;
+  transform: translateX(4px);
+  cursor: pointer;
+}
+
+/* 🕶️ Light Mode */
+body.light-mode {
+  background-color: #363232;
+  color: #141414;
+}
+
+body.light-mode .container {
+  background: #382d2d;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode .nav-link {
+  color: #238636;
+}
+
+body.light-mode .btn.download {
+  background-color: #141414;
+  color: #f3c613;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode h1 {
+  color: #141414;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    padding: 25px;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  .intro-text {
+    font-size: 0.85rem;
+  }
+  .btn {
+    padding: 8px 16px;
+  }
+}
+
+.footer {
+  background: #0d0d0d;
+  color: #f1f1f1;
+  padding: 50px 20px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 60px;
+  box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.footer-container h3 {
+  color: #e4b109;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.footer-container p {
+  line-height: 1.6;
+  max-width: 280px;
+  margin: 0 auto;
+  opacity: 0.85;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin: 8px 0;
+}
+
+.footer-links a {
+  color: #f1f1f1;
+  text-decoration: none;
+  transition: 0.3s ease;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  color: #30b60f; 
+  text-shadow: 0 0 8px rgba(48, 182, 15, 0.8);
+}
+
+.footer-socials .social-icons a {
+  margin: 0 8px;
+  color: #f1f1f1;
+  font-size: 1.3rem;
+  transition: 0.3s ease;
+}
+
+.footer-socials .social-icons a:hover {
+  color: #e4b109;
+  text-shadow: 0 0 12px rgba(228, 177, 9, 0.7);
+}
+
+.footer-bottom {
+  font-size: 0.9em;
+  opacity: 0.7;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
